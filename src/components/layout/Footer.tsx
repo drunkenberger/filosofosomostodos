@@ -129,8 +129,8 @@ export function Footer() {
                 ))}
               </div>
               <div className="text-sm">
-                <div className="text-white/90 font-semibold">50+ años</div>
-                <div className="text-white/50">de experiencia</div>
+                <div className="text-white/90 font-semibold">Desde 1969</div>
+                <div className="text-white/50">metodología probada</div>
               </div>
             </div>
           </div>

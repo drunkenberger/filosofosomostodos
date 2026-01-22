@@ -114,8 +114,8 @@ export function Hero() {
         {/* Social proof */}
         <div className="hero-social-proof flex flex-col sm:flex-row items-center justify-center gap-6 text-white/60 text-sm">
           <div className="flex items-center gap-2">
-            <span className="text-naranja font-bold text-lg">50+</span>
-            <span>años de metodología probada</span>
+            <span className="text-naranja font-bold text-lg">1969</span>
+            <span>metodología creada a finales de los 60&apos;s</span>
           </div>
           <div className="hidden sm:block w-px h-4 bg-white/30" />
           <div className="flex items-center gap-2">
