@@ -56,8 +56,8 @@ export function Workshops() {
               className="h-14 w-auto"
             />
             <p className="text-purpura/80 text-sm text-left">
-              Impartido por <span className="text-purpura font-semibold">Verónica Morelos Zaragoza Gutiérrez</span><br />
-              Facilitadora certificada por la <span className="font-medium">Federación Mexicana de Filosofía para Niños</span>
+              Impartido por Verónica Morelos Zaragoza Gutiérrez<br />
+              Facilitadora certificada por la <span className="text-purpura font-semibold">Federación Mexicana de Filosofía para Niños</span>
             </p>
           </div>
         </ScrollReveal>
