@@ -6,7 +6,7 @@ const STATS = [
     value: "50",
     suffix: "+",
     label: "Años de experiencia",
-    sublabel: "Programa desarrollado en 1970",
+    sublabel: "Programa desarrollado a finales de los 60's",
   },
   {
     value: "60",

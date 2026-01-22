@@ -115,7 +115,7 @@ export function Footer() {
             </Link>
             <p className="text-white/75 leading-relaxed text-lg mb-8 max-w-md">
               Transformando la curiosidad natural de los niños en el motor del pensamiento crítico
-              y el diálogo filosófico desde 1970.
+              y el diálogo filosófico desde finales de los 60's.
             </p>
 
             {/* Social proof badge */}

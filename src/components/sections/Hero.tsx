@@ -119,8 +119,8 @@ export function Hero() {
           </div>
           <div className="hidden sm:block w-px h-4 bg-white/30" />
           <div className="flex items-center gap-2">
-            <span className="text-naranja font-bold text-lg">1000+</span>
-            <span>familias transformadas</span>
+            <span className="text-naranja font-bold text-lg">Miles</span>
+            <span>de familias transformadas en el mundo</span>
           </div>
           <div className="hidden sm:block w-px h-4 bg-white/30" />
           <div className="flex items-center gap-2">
