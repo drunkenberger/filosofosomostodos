@@ -384,10 +384,10 @@ function createPointerState(config: {
       document.body.addEventListener("pointermove", handlePointerMove);
       document.body.addEventListener("pointerleave", handlePointerLeave);
       document.body.addEventListener("click", handleClick);
-      document.body.addEventListener("touchstart", handleTouchStart, { passive: false });
-      document.body.addEventListener("touchmove", handleTouchMove, { passive: false });
-      document.body.addEventListener("touchend", handleTouchEnd, { passive: false });
-      document.body.addEventListener("touchcancel", handleTouchEnd, { passive: false });
+      document.body.addEventListener("touchstart", handleTouchStart, { passive: true });
+      document.body.addEventListener("touchmove", handleTouchMove, { passive: true });
+      document.body.addEventListener("touchend", handleTouchEnd, { passive: true });
+      document.body.addEventListener("touchcancel", handleTouchEnd, { passive: true });
       isListening = true;
     }
   }
@@ -453,7 +453,6 @@ function handlePointerLeave() {
 
 function handleTouchStart(e: TouchEvent) {
   if (e.touches.length > 0) {
-    e.preventDefault();
     globalPointer.x = e.touches[0].clientX;
     globalPointer.y = e.touches[0].clientY;
     for (const [elem, state] of pointerMap) {
@@ -473,7 +472,6 @@ function handleTouchStart(e: TouchEvent) {
 
 function handleTouchMove(e: TouchEvent) {
   if (e.touches.length > 0) {
-    e.preventDefault();
     globalPointer.x = e.touches[0].clientX;
     globalPointer.y = e.touches[0].clientY;
     for (const [elem, state] of pointerMap) {
