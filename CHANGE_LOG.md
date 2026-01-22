@@ -31,3 +31,5 @@ Este archivo registra todos los cambios exitosos realizados en el proyecto.
 [2026-01-20] Reestructuración de layout estilo Nivora - Container expandido a 1600px, Hero 100vh, mayor espaciado entre secciones | Archivos: globals.css, Header.tsx, Hero.tsx, AboutFpN.tsx, Workshops.tsx, VideoSection.tsx, ContactForm.tsx, Footer.tsx | Estado: ✅ Exitoso
 
 [2026-01-21] Formulario de contacto personalizado conectado a Google Sheets - Reemplazo de Google Form embebido por formulario nativo con diseño del sitio, integración con Google Apps Script para guardar contactos automáticamente | Archivos: src/components/ui/CustomContactForm.tsx (nuevo), src/components/sections/ContactForm.tsx, src/lib/constants.ts, ELEMENT_IDS.md | Estado: ✅ Exitoso
+
+[2026-01-21] Animación Ballpit en Hero - Integración de React Bits Ballpit (bolas 3D interactivas con Three.js) como fondo del Hero, colores rosa/amarillo/naranja, seguimiento de cursor | Archivos: src/components/reactbits/Ballpit.tsx (nuevo), src/components/sections/Hero.tsx, components.json (nuevo), src/lib/utils.ts (nuevo), tsconfig.json, package.json | Estado: ✅ Exitoso

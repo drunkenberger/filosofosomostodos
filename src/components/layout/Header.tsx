@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { NAV_LINKS } from "@/lib/constants";
@@ -21,8 +22,8 @@ export function Header() {
       id="header-main-001"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-soft-lg py-3"
-          : "bg-transparent py-5"
+          ? "bg-white/95 backdrop-blur-md shadow-soft-lg py-4"
+          : "bg-transparent py-6"
       }`}
       style={{
         borderBottom: isScrolled ? "2px solid transparent" : "none",
@@ -36,19 +37,20 @@ export function Header() {
           <Link
             href="/"
             id="header-logo-001"
-            className={`text-xl md:text-2xl font-bold transition-all duration-500 hover:scale-105 relative group ${
-              isScrolled
-                ? "text-purpura"
-                : "text-white"
-            }`}
+            className="flex items-center transition-all duration-500 hover:scale-105 group"
           >
-            <span className="relative z-10">Filósofos Somos Todos</span>
+            <Image
+              src="/logo.png"
+              alt="Filósofos Somos Todos Logo"
+              width={60}
+              height={60}
+              className="mr-3"
+              priority
+            />
             <span
-              className="absolute inset-0 bg-gradient-to-r from-naranja via-amarillo to-cyan bg-clip-text text-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-              style={{
-                backgroundSize: "200% 100%",
-                animation: "gradientFlow 3s ease infinite",
-              }}
+              className={`text-xl font-bold ${
+                isScrolled ? "text-purpura" : "text-white"
+              }`}
             >
               Filósofos Somos Todos
             </span>
@@ -58,8 +60,8 @@ export function Header() {
             id="header-menu-toggle-001"
             className={`md:hidden p-2 transition-colors duration-300 rounded-lg ${
               isScrolled
-                ? "text-purpura hover:text-naranja hover:bg-amarillo/20"
-                : "text-white hover:text-naranja hover:bg-white/10"
+                ? "text-purpura hover:text-naranja-vibrante hover:bg-amarillo/20"
+                : "text-white hover:text-naranja-vibrante hover:bg-white/10"
             }`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
@@ -90,7 +92,7 @@ export function Header() {
                   {link.label}
                   <span
                     className={`absolute bottom-0 left-0 w-0 h-[3px] transition-all duration-500 ease-out group-hover:w-full ${
-                      isScrolled ? "bg-gradient-to-r from-naranja to-cyan" : "bg-gradient-to-r from-amarillo to-naranja"
+                      isScrolled ? "bg-gradient-to-r from-naranja-vibrante to-cyan" : "bg-gradient-to-r from-amarillo to-naranja-vibrante"
                     }`}
                     style={{
                       borderRadius: "2px 2px 0 0",
@@ -105,7 +107,7 @@ export function Header() {
                 id="header-cta-001"
                 className={`font-semibold px-6 py-2.5 rounded-full transition-all duration-300 hover:-translate-y-0.5 ${
                   isScrolled
-                    ? "bg-naranja text-purpura hover:bg-naranja/90 shadow-lg hover:shadow-xl"
+                    ? "bg-naranja-vibrante text-purpura hover:bg-naranja-vibrante/90 shadow-lg hover:shadow-xl"
                     : "bg-white/10 backdrop-blur-sm text-white border border-white/30 hover:bg-white/20"
                 }`}
               >
@@ -133,8 +135,8 @@ export function Header() {
                   id={`header-nav-mobile-${String(index + 1).padStart(3, "0")}`}
                   className={`block py-3 px-4 transition-all duration-300 font-medium rounded-lg ${
                     isScrolled
-                      ? "text-purpura hover:text-naranja hover:bg-amarillo/10"
-                      : "text-white hover:text-naranja hover:bg-white/10"
+                      ? "text-purpura hover:text-naranja-vibrante hover:bg-amarillo/10"
+                      : "text-white hover:text-naranja-vibrante hover:bg-white/10"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >

@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        naranja: "#FFBF47",
+        naranja: "#FFEC9D",
+        "naranja-vibrante": "#FFBF47",
         verde: "#C8CC69",
         amarillo: "#FFEC9D",
         purpura: "#6B6380",
@@ -34,8 +35,18 @@ const config: Config = {
         "breathe": "breathe 4s ease-in-out infinite",
         "shimmer": "shimmer 2s linear infinite",
         "glow-pulse": "glowPulse 2s ease-in-out infinite",
+        "drift-1": "drift-1 18s ease-in-out infinite alternate",
+        "drift-2": "drift-2 22s ease-in-out infinite alternate",
       },
       keyframes: {
+        'drift-1': {
+          "0%": { transform: "translateX(0) translateY(0)" },
+          "100%": { transform: "translateX(50px) translateY(-50px)" },
+        },
+        'drift-2': {
+          "0%": { transform: "translateX(0) translateY(0)" },
+          "100%": { transform: "translateX(-40px) translateY(60px)" },
+        },
         fadeIn: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },

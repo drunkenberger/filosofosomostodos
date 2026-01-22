@@ -76,7 +76,7 @@ export function CustomContactForm({ id, webAppUrl }: CustomContactFormProps) {
         taller: "",
         mensaje: "",
       });
-    } catch (error) {
+    } catch {
       setStatus({
         type: "error",
         message: "Hubo un error. Por favor intenta de nuevo.",
