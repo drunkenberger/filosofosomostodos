@@ -3,16 +3,40 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { NEWSLETTER_WEBAPP_URL } from "@/lib/constants";
+
+type NewsletterStatus = "idle" | "loading" | "success" | "error";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
   const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<NewsletterStatus>("idle");
 
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Newsletter logic would go here
-    console.log("Newsletter signup:", email);
-    setEmail("");
+    setStatus("loading");
+
+    try {
+      const urlParams = new URLSearchParams();
+      urlParams.append("email", email);
+      urlParams.append("fecha", new Date().toISOString());
+
+      await fetch(NEWSLETTER_WEBAPP_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: urlParams.toString(),
+      });
+
+      setStatus("success");
+      setEmail("");
+      setTimeout(() => setStatus("idle"), 3000);
+    } catch {
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 3000);
+    }
   };
 
   return (
@@ -52,16 +76,24 @@ export function Footer() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="tu@email.com"
                 required
-                className="flex-1 px-6 py-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-naranja-vibrante focus:border-transparent transition-all duration-300"
+                disabled={status === "loading"}
+                className="flex-1 px-6 py-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-naranja-vibrante focus:border-transparent transition-all duration-300 disabled:opacity-50"
               />
               <button
                 id="footer-newsletter-submit-001"
                 type="submit"
-                className="px-8 py-4 bg-naranja-vibrante text-purpura font-semibold rounded-xl hover:bg-naranja-vibrante/90 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow-naranja whitespace-nowrap"
+                disabled={status === "loading"}
+                className="px-8 py-4 bg-naranja-vibrante text-purpura font-semibold rounded-xl hover:bg-naranja-vibrante/90 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow-naranja whitespace-nowrap disabled:opacity-50 disabled:hover:translate-y-0"
               >
-                Suscribirme
+                {status === "loading" ? "Enviando..." : status === "success" ? "¡Suscrito!" : "Suscribirme"}
               </button>
             </form>
+            {status === "success" && (
+              <p className="text-verde text-sm mt-3">¡Gracias por suscribirte!</p>
+            )}
+            {status === "error" && (
+              <p className="text-naranja text-sm mt-3">Hubo un error. Intenta de nuevo.</p>
+            )}
           </div>
         </div>
 
@@ -73,8 +105,8 @@ export function Footer() {
               <Image
                 src="/logo.png"
                 alt="Filósofos Somos Todos Logo"
-                width={50}
-                height={50}
+                width={75}
+                height={75}
                 className="mr-4"
               />
               <h3 className="text-2xl md:text-3xl font-bold text-naranja-vibrante group-hover:text-naranja transition-colors duration-300">

@@ -19,7 +19,7 @@ export function Tabs({ tabs, children, defaultTab }: TabsProps) {
   return (
     <div>
       <div
-        className="flex flex-col sm:flex-row gap-2 sm:gap-1 p-1 bg-purpura/5 rounded-full mb-8 max-w-md mx-auto"
+        className="flex flex-col sm:flex-row gap-2 sm:gap-1 p-1.5 bg-white/80 backdrop-blur-sm border border-amarillo/30 rounded-full mb-8 max-w-md mx-auto shadow-sm"
         role="tablist"
       >
         {tabs.map((tab) => (
@@ -30,8 +30,8 @@ export function Tabs({ tabs, children, defaultTab }: TabsProps) {
             onClick={() => setActiveTab(tab.id)}
             className={`flex-1 px-6 py-3 rounded-full font-medium text-sm transition-all duration-300 ${
               activeTab === tab.id
-                ? "bg-naranja text-purpura shadow-md"
-                : "text-purpura/70 hover:text-purpura hover:bg-purpura/5"
+                ? "bg-gradient-to-r from-naranja-vibrante to-naranja text-purpura shadow-md"
+                : "text-purpura/70 hover:text-purpura hover:bg-amarillo/20"
             }`}
           >
             {tab.label}

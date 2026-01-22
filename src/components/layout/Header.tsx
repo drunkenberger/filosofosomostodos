@@ -42,8 +42,8 @@ export function Header() {
             <Image
               src="/logo.png"
               alt="Filósofos Somos Todos Logo"
-              width={60}
-              height={60}
+              width={90}
+              height={90}
               className="mr-3"
               priority
             />

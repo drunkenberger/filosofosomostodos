@@ -19,22 +19,19 @@ export function FAQ({ showAll = false }: FAQProps) {
   return (
     <section
       id="faq"
-      className="py-24 md:py-32 bg-crema relative overflow-hidden"
+      className="py-24 md:py-32 bg-gradient-to-b from-white via-amarillo/5 to-amarillo/15 relative overflow-hidden"
     >
-      <div className="absolute w-80 h-80 bg-verde/10 rounded-full blur-[100px] -top-20 -right-20" />
-      <div className="absolute w-64 h-64 bg-naranja/10 rounded-full blur-[80px] bottom-20 -left-20" />
+      <div className="absolute w-[500px] h-[500px] bg-naranja/10 rounded-full blur-[120px] -top-40 -right-40" />
+      <div className="absolute w-[400px] h-[400px] bg-cyan/10 rounded-full blur-[100px] bottom-0 -left-40" />
 
       <div className="relative z-10 max-w-[900px] mx-auto px-6">
         <ScrollReveal direction="up">
           <div className="text-center mb-12">
-            <span className="inline-block text-verde font-semibold text-sm uppercase tracking-widest mb-4">
+            <span className="inline-block text-naranja-vibrante font-semibold text-sm uppercase tracking-widest mb-4">
               Resolvemos tus dudas
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-purpura mb-6 leading-tight">
-              Preguntas{" "}
-              <span className="bg-gradient-to-r from-naranja to-cyan bg-clip-text text-transparent">
-                Frecuentes
-              </span>
+              Preguntas Frecuentes
             </h2>
             <p className="text-lg md:text-xl text-purpura/80 max-w-2xl mx-auto leading-relaxed">
               Encuentra respuestas sobre nuestros talleres y la metodología de

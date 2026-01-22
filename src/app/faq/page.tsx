@@ -1,4 +1,5 @@
 import { FAQ } from "@/components/sections/FAQ";
+import { ContactForm } from "@/components/sections/ContactForm";
 
 export const metadata = {
   title: "Preguntas Frecuentes | Filósofos Somos Todos",
@@ -7,8 +8,9 @@ export const metadata = {
 
 export default function FAQPage() {
   return (
-    <main className="pt-24">
+    <main className="pt-24 bg-white min-h-screen">
       <FAQ showAll />
+      <ContactForm />
     </main>
   );
 }

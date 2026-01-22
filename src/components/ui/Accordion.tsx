@@ -27,7 +27,7 @@ export function Accordion({ items }: AccordionProps) {
         return (
           <div
             key={item.id}
-            className="bg-white/60 backdrop-blur-sm border border-purpura/10 rounded-2xl overflow-hidden transition-all duration-300 hover:border-purpura/20"
+            className="bg-white/80 backdrop-blur-sm border border-amarillo/30 rounded-2xl overflow-hidden transition-all duration-300 hover:border-naranja-vibrante/50 hover:shadow-md"
           >
             <button
               id={item.id}
@@ -35,16 +35,16 @@ export function Accordion({ items }: AccordionProps) {
               aria-expanded={isOpen}
               className="w-full flex items-center justify-between p-5 text-left group"
             >
-              <span className="font-medium text-purpura pr-4 group-hover:text-purpura/80">
+              <span className="font-medium text-purpura pr-4 group-hover:text-naranja-vibrante transition-colors duration-300">
                 {item.question}
               </span>
               <span
-                className={`flex-shrink-0 w-8 h-8 rounded-full bg-naranja/10 flex items-center justify-center transition-all duration-300 ${
-                  isOpen ? "rotate-45 bg-naranja/20" : ""
+                className={`flex-shrink-0 w-8 h-8 rounded-full bg-naranja-vibrante/10 flex items-center justify-center transition-all duration-300 ${
+                  isOpen ? "rotate-45 bg-naranja-vibrante/20" : ""
                 }`}
               >
                 <svg
-                  className="w-4 h-4 text-naranja"
+                  className="w-4 h-4 text-naranja-vibrante"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

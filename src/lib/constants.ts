@@ -15,7 +15,7 @@ export const SITE_CONFIG = {
 export const NAV_LINKS = [
   { href: "#que-es", label: "¿Qué es FpN?" },
   { href: "#talleres", label: "Talleres" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/faq", label: "FAQ" },
   { href: "#contacto", label: "Contacto" },
 ] as const;
 
@@ -61,6 +61,10 @@ export const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/YOUR_FORM_ID/v
 // URL del Web App de Google Apps Script para el formulario personalizado
 // Reemplaza con tu URL después de hacer deploy del script
 export const GOOGLE_SHEETS_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbxd9SHFlIHOjFY79rIUmTaDt7fJre_atH0Bb5Sb7ZuG4ORYCCdw16BOMK7e_3KQY8EV/exec";
+
+// URL del Web App para el newsletter (puedes usar el mismo script con una hoja diferente)
+// Reemplaza con tu URL después de hacer deploy del script
+export const NEWSLETTER_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbxdrZoHphomW275AndY_uy_ryKUuAOdCklYsH-1bgvPQfgpvuoib57ja9hK53SFcUEC/exec";
 
 export const FAQ_CATEGORIES = [
   { id: "talleres", label: "Sobre los Talleres" },
