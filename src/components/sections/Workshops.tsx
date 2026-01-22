@@ -49,16 +49,24 @@ export function Workshops() {
 
         {/* Certification badge */}
         <ScrollReveal direction="up" delay={500}>
-          <div className="mt-16 flex items-center justify-center gap-4 bg-white/80 backdrop-blur-sm border border-amarillo/30 rounded-2xl px-6 py-4 max-w-xl mx-auto shadow-sm">
+          <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-5 bg-gradient-to-r from-white/90 to-white/70 backdrop-blur-sm border border-amarillo/40 rounded-2xl px-8 py-6 max-w-2xl mx-auto shadow-md">
             <img
               src="/logo_FpN.png"
               alt="Federación Mexicana de Filosofía para Niños"
-              className="h-14 w-auto"
+              className="h-16 w-auto flex-shrink-0"
             />
-            <p className="text-purpura/80 text-sm text-left">
-              Impartido por Verónica Morelos Zaragoza Gutiérrez<br />
-              Facilitadora certificada por la <span className="text-purpura font-semibold">Federación Mexicana de Filosofía para Niños</span>
-            </p>
+            <div className="h-12 w-px bg-gradient-to-b from-transparent via-purpura/20 to-transparent hidden sm:block" />
+            <div className="text-center sm:text-left">
+              <p className="text-purpura font-semibold text-base mb-1">
+                Verónica Morelos Zaragoza Gutiérrez
+              </p>
+              <p className="text-purpura/70 text-sm">
+                Facilitadora certificada por la
+              </p>
+              <p className="text-purpura font-semibold text-sm">
+                Federación Mexicana de Filosofía para Niños
+              </p>
+            </div>
           </div>
         </ScrollReveal>
       </div>
