@@ -110,7 +110,7 @@ export function Footer() {
                 className="mr-4"
               />
               <h3 className="text-2xl md:text-3xl font-bold text-naranja-vibrante group-hover:text-naranja transition-colors duration-300">
-                Filósofos Somos Todos
+                filosofosomostodos
               </h3>
             </Link>
             <p className="text-white/75 leading-relaxed text-lg mb-8 max-w-md">
@@ -209,7 +209,7 @@ export function Footer() {
         <div className="border-t border-white/10 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex flex-wrap justify-center md:justify-start gap-6 text-sm text-white/50">
-              <span>© {currentYear} Filósofos Somos Todos</span>
+              <span>© {currentYear} filosofosomostodos</span>
               <span className="hidden md:inline">•</span>
               <span>Todos los derechos reservados</span>
             </div>

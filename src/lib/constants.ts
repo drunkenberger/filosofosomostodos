@@ -7,7 +7,7 @@ export const COLORS = {
 } as const;
 
 export const SITE_CONFIG = {
-  name: "Filosofos Somos Todos",
+  name: "filosofosomostodos",
   description: "Talleres de Filosofía para Niños basados en el programa de Matthew Lipman",
   url: "https://filosofossomostodos.com",
 } as const;

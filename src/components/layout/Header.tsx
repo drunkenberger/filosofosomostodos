@@ -52,7 +52,7 @@ export function Header() {
                 isScrolled ? "text-purpura" : "text-white"
               }`}
             >
-              Filósofos Somos Todos
+              filosofosomostodos
             </span>
           </Link>
 
