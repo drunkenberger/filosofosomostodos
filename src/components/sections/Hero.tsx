@@ -61,8 +61,11 @@ export function Hero() {
         style={{ backgroundImage: "url('/hero_background_2.png')" }}
       />
 
-      {/* Ballpit Background */}
-      <div className="absolute inset-0 w-full h-full z-0">
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-purpura/60 z-10" />
+
+      {/* Ballpit - above overlay so colors show properly */}
+      <div className="absolute inset-0 w-full h-full z-[15] pointer-events-none md:pointer-events-auto">
         <Ballpit
           count={100}
           gravity={0.5}
@@ -72,9 +75,6 @@ export function Hero() {
           colors={["#f495d6", "#fffb8f", "#f9cf5d"]}
         />
       </div>
-
-      {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-purpura/60 z-10" />
 
       <div className="relative z-20 max-w-[1200px] mx-auto px-6 py-20 text-center">
         {/* Trust badge */}
